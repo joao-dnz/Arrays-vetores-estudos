@@ -1,24 +1,27 @@
-import java.util.Scanner;
+import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        int[]notas = {6,8,5,10,7};
-
-        int soma = 0;
-        int contador = 0;
-
-        for (int i = 0; i < notas.length; i++) {
-            soma = soma + notas[i];
+        ArrayList<String> frutas = new ArrayList<>();
 
 
-        if(notas[i]>=7){
-        contador++;
+        frutas.add("Maçã");
+        frutas.add("banana");
+        frutas.add("uva");
+        frutas.add("morango");
+        frutas.remove("uva");
+        frutas.set(1, "abacaxi");
+
+
+
+        System.out.println(frutas.size());
+        System.out.println(frutas.get(0));
+        System.out.println(frutas);
+        System.out.println(frutas.contains("Maçã"));
+        System.out.println(frutas.contains("bamnana"));
+
+        for(int i = 0; i  < frutas.size(); i++){
+            System.out.println(frutas.get(i));
+        }
     }
-    }
-
-
-    
-    
-    System.out.println("Soma das notas: " + soma);
-        System.out.println("Notas aprovadas: " + contador);
-}}
+}
